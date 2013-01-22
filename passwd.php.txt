@@ -1,0 +1,9 @@
+<?php
+
+// You probably need to change the XXXXs, but not much else.
+// This is tested with Oracle 11g and PHP 5.4 with
+// Kentucky's hosted voyager database
+
+$user = 'ro_XXXX';
+$pass = 'XXXXXXXX';
+$host = '(DESCRIPTION=(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = XXXX-voy.hosted.exlibrisgroup.com)(PORT = 1521)))(CONNECT_DATA=(SID=VGER)))';
