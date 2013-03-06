@@ -16,9 +16,7 @@ SetTitleMatchMode, 2
 $#o::
 IfWinActive, Voyager Cataloging
 {
-	Send !M{tab}{tab}{tab}{tab}{tab}{tab}{tab}^{Down}
-
-{Up}{Up}{Insert}946{tab}{tab}{tab}^v
+	Send !M{tab}{tab}{tab}{tab}{tab}{tab}{tab}^{Down}{Up}{Up}{Insert}946{tab}{tab}{tab}^v
 } else {
 	Send #o
 }
