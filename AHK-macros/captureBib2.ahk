@@ -18,22 +18,16 @@ AutoTrim, on
 $#b::
 IfWinActive, Voyager Cataloging
 {
-  WinGetTitle, Window_Title, A
-  If (RegExMatch(Window_Title, "Voyager Cataloging - \[.*
-
-[Bb]ib (\d+) ", SubPat)) {
-    clipboard = %SubPat1%
-    MsgBox, 0, Success, Copied Bib #: %SubPat1%, 1
+  WinGetText, Window_Title, A
+  If (RegExMatch(Window_Title, "^(Voyager Cataloging - \[)?(Hldg \d+ for )?[Bb]ib (\d+) ", SubPat)) {
+    clipboard = %SubPat3%
+    MsgBox, 0, Success, Copied Bib #: %SubPat3%, 1
     Sleep 500
   } else {    
-    If (RegExMatch(Window_Title, "Voyager Cataloging - 
-
-\[Item")) {
+    If (RegExMatch(Window_Title, "^(Voyager Cataloging - \[)?Item")) {
 	Send !fl{enter}
 	Sleep, 500
-	Send {tab}{tab}{tab}{Down}{Down}{Right}{Right}
-
-{Right}{Right}{Right}{Right}{Right}{Right}
+	Send {tab}{tab}{tab}{Down}{Down}{Right}{Right}{Right}{Right}{Right}{Right}{Right}{Right}
 	Sleep, 300
 	Send {Shift Down}{End}{Shift Up}
 	Sleep, 300
@@ -43,7 +37,7 @@ IfWinActive, Voyager Cataloging
 	clipboard = %bak%
         MsgBox, 0, Success, Copied Bib #: %clipboard%, 1
     } else {
-      MsgBox, 0, Fail, No match!, 1
+      MsgBox, 0, Fail, Record not specified, 1
     }
   }
 } else {

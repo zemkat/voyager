@@ -20,9 +20,7 @@ IfWinActive, Voyager Cataloging
 {
 	Send !fl{enter}
 	Sleep, 300
-	Send {tab}{tab}{tab}{Down}{Down}{Right}{Right}
-
-{Right}{Right}{Right}{Right}{Right}{Right}
+	Send {tab}{tab}{tab}{Down}{Down}{Right}{Right}{Right}{Right}{Right}{Right}{Right}{Right}
 	Sleep, 300
 	Send {Shift Down}{End}{Shift Up}
 	Sleep, 300

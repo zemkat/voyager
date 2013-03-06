@@ -16,10 +16,10 @@ SetTitleMatchMode, 2
 $#a::
 IfWinActive, Voyager Cataloging
 {
-	WinGetTitle, Window_Title, A
-	If (RegExMatch(Window_Title, "Voyager Cataloging - \[Auth (\d+) ", SubPat)) {
-		clipboard = %SubPat1%
-		MsgBox, 0, Success, Copied Auth #: %SubPat1%, 1
+	WinGetText, Window_Title, A
+	If (RegExMatch(Window_Title, "^(Voyager Cataloging - \[)?Auth (\d+) ", SubPat)) {
+		clipboard = %SubPat2%
+		MsgBox, 0, Success, Copied Auth #: %SubPat2%, 1
     	Sleep 500
 	} else {  
 		MsgBox, 0, Fail, Not an authority record, 1
@@ -28,4 +28,3 @@ IfWinActive, Voyager Cataloging
 	Send, #a
 }
 Return
-

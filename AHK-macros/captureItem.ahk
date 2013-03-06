@@ -16,10 +16,10 @@ SetTitleMatchMode, 2
 $#i::
 IfWinActive, Voyager Cataloging
 {
-	WinGetTitle, Window_Title, A
-	If (RegExMatch(Window_Title, "Voyager Cataloging - \[Item (\d+)[ \]]", SubPat)) {
-		clipboard = %SubPat1%
-		MsgBox, 0, Success, Copied Item #: %SubPat1%, 1
+  WinGetText, Window_Title, A
+	If (RegExMatch(Window_Title, "^(Voyager Cataloging - \[)?Item (\d+)", SubPat)) {
+		clipboard = %SubPat2%
+		MsgBox, 0, Success, Copied Item #: %SubPat2%, 1
     	Sleep 500
 	} else {  
 		MsgBox, 0, Fail, Item not specified, 1
@@ -28,4 +28,3 @@ IfWinActive, Voyager Cataloging
 	Send #i
 }
 Return
-
