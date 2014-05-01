@@ -9,6 +9,7 @@ Tools for the Ex Libris Voyager integrated library system.
 * `tag_report.php` -- Generate a report of all tag usage in Voyager
 * `triple_nickel.php` -- Generate a report of all instances of one tag, raw and grouped
 * `AHK-macros` -- AutoHotkey macros for Voyager
+* `queries` -- Voyager queries, including fast BLOB queries
 
 PHP tools use oracle (11g) for php (5.4). The connection information to the voyager database is stored in a file called `passwd.php` and a sample file is provided in `passwd.php.txt` 
 
