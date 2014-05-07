@@ -1,6 +1,6 @@
 <?php
 #
-#       triple_nickel.php - this script should be run daily by a cron job
+#       triple_nickel.php - create a report of tag usage
 #
 #       Usage: php triple_nickel.php <tag>
 #
