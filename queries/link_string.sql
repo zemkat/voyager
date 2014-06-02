@@ -1,5 +1,5 @@
 #
-# link_sring.sql
+# link_string.sql
 #
 # Find unsuppressed bib records in Voyager whose links contain the provided 
 #   string
